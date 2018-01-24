@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		div {
+			width: 50px;
+			height: 50px;
+			background: #c00;
+			position: absolute;
+			top: 10px;
+			left: 0;
+			text-align: center;
+			line-height: 50px;
+			color: #fff;
+		}
+	</style>
+
+	<body>
+	</body>
+	<script>
+		window.onload = function(){
+			var div = document.getElementsByTagName("div");
+			
+			for(var i=0;i<11;i++){
+				document.body.innerHTML += "<div>"+i +"</div>";
+				div[i].style.top = 60*i + "px";
+				div[i].style.left = 60*i + "px";
+			}
+			
+//			for(var i=0;i>=11;i++){
+//				document.body.innerHTML + = "<div>" + i + "</div>";
+//				div[i].style.top = 60*(i) 
+//			}
+		}
+	</script>
+
+</html>

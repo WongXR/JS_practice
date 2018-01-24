@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		div{
+			border:1px solid #ddd;
+			width:100px;
+			height:100px;
+		}
+	</style>
+	<body>
+		属性：<input id="input1" type="text" /><br />
+		数值：<input id="input2" type="text" />
+		<input id="sub" onclick ="abc()" value="confirm" type="button" />
+		
+		<div id="div1"></div>
+	<script>
+		function abc(){
+			var input1 = document.getElementById("input1");
+			var input2 = document.getElementById("input2");
+			var sub = document.getElementById("sub");
+			var div1 = document.getElementById("div1");
+			div1.style[input1.value] = input2.value;
+		}
+	</script>
+	</body>
+</html>

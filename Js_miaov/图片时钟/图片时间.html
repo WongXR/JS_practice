@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>无标题文档</title>
+	</head>
+	<script>
+		window.onload = function() {
+			var oP = document.getElementById("time");
+			var aImg = document.getElementsByTagName("img");
+			setInterval(getTime, 500);
+			getTime();
+
+			function getTime() {
+				var Time = new Date();
+				var Hours = Time.getHours();
+				var Min = Time.getMinutes();
+				var Sec = Time.getSeconds();
+				var str = zero(Hours) + zero(Min) + zero(Sec);
+				for(var i = 0; i < str.length; i++) {
+					aImg[i].src = "img/" + str.charAt(i) + ".JPG";
+				}
+				
+//				alert(typeof  zero(Hours))
+			}
+		}
+		function zero(i) {
+			if(i < 10) {
+				i = "0" + i;
+			}
+			return ""+i;
+		}
+	</script>
+
+	<body>
+		<p id="time" style="font-size:60px;"></p>
+		<img src="img/0.JPG" />
+		<img src="img/0.JPG" />
+		<img src="img/0.JPG" />
+		<img src="img/0.JPG" />
+		<img src="img/0.JPG" />
+		<img src="img/0.JPG" />
+	</body>
+
+</html>

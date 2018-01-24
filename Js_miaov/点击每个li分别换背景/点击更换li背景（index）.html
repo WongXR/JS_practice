@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		li {
+			width: 100px;
+			height: 100px;
+			background: url(img/1.jpg);
+			float: left;
+			margin: 10px;
+			list-style: none;
+		}
+	</style>
+
+	<body>
+		<div id="div">
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+	</body>
+	<script>
+		window.onload = function() {
+			var ali = document.getElementsByTagName("li");
+			for(i = 0; i < ali.length; i++) {
+				ali[i].onoff = true;
+				ali[i].onclick = function() {
+					if(this.onoff) {
+						this.style.background = "url(img/2.jpg)";
+						this.onoff = false;
+					} else {
+						this.style.background = "url(img/1.jpg)";
+						this.onoff = true;
+					}
+				}
+			}
+		}
+	</script>
+
+</html>

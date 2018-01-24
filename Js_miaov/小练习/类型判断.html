@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+
+		<script>
+			judge(1);
+			judge("wong");
+			judge(function(){alert(521);})
+			function judge(a){
+				if(typeof a === "number" && a===a){
+					alert(a+1);//2
+					alert("我是数字"+a+1); //11
+				}else if(typeof a ==="string"){
+					alert(a.charAt(2));
+				}else if(typeof a ==="function"){
+					a();
+				}
+			}
+		</script>
+	</body>
+
+</html>

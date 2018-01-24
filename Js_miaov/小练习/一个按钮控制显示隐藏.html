@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+	<img id="img" src="img/1.jpg" alt="" width="100" height = "100">
+	<input id="btn" type="button" value="change">
+</body>
+	<script>
+		var img = document.getElementById("img");
+		var btn = document.getElementById("btn");
+		var onoff = true;
+		
+		btn.onclick = function(){
+			if(onoff){
+				img.style.display = "none";
+				onoff = false;
+			}
+			else{
+				img.style.display = "block";
+				onoff = true;
+			}
+		}
+	</script>
+</html>
